@@ -38,3 +38,17 @@ If running on a device you must first:
 `yarn run ios`
 
 This will start a simulator for you.
+
+## Screenshot
+
+### iOS
+
+<div align="center">
+  <img width=170 src ="https://github.com/lijin820/react-native-article/blob/master/screens/2.jpg" />
+</div>
+
+### Android
+
+<div align="center">
+  <img width=170 src ="https://github.com/lijin820/react-native-article/blob/master/screens/1.jpg"/>
+</div>
