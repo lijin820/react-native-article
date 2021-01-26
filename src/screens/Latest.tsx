@@ -59,6 +59,7 @@ export function Latest() {
         values={['Articles', 'Discussions']}
         selectedIndex={selectedIndex}
         style={styles.segment}
+        appearance={'light'}
         fontStyle={styles.font}
         activeFontStyle={styles.activeFont}
         onChange={(event) => {
@@ -72,6 +73,9 @@ export function Latest() {
               <Carousel
                 ref={carouselRef}
                 data={banners}
+                autoplay
+                loop
+                autoplayDelay={3000}
                 renderItem={({ item, index }: any) => {
                   return (
                     <View key={index} style={styles.carouselWrapper}>
@@ -120,6 +124,7 @@ export function Latest() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#FFFFFF',
   },
   segment: {
     height: 40,
@@ -150,7 +155,7 @@ const styles = StyleSheet.create({
   pageContainer: {
     width: '100%',
     height: 20,
-    backgroundColor: '#F1F3F4',
+    backgroundColor: '#FFFFFF',
   },
   dotContainerStyle: {
     height: 20,
