@@ -5,7 +5,7 @@ import Spinner from 'react-native-spinkit';
 export function LoadingSpinner() {
   return (
     <SafeAreaView style={styles.container}>
-      <Spinner isVisible={true} size={100} type={'Bounce'} color={'#7FB900'} />
+      <Spinner isVisible={true} size={30} type={'Wave'} color={'#7FB900'} />
     </SafeAreaView>
   );
 }

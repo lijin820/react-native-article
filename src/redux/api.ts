@@ -36,7 +36,7 @@ export default class Api {
     const instance = new Api();
     return instance.request(
       'get',
-      '/post/2100/newrecents?postType=0&width=110&height=110&page=1&pageSize=20',
+      '/post/2151/newrecents?postType=0&width=110&height=110&page=1&pageSize=20',
       null,
     );
   }

@@ -4,9 +4,18 @@ export type BannerType = {
   Title: string;
 };
 
+export type ArticleType = {
+  Id: string;
+  AttachmentUrl: string;
+  SectionName: string;
+  Subject: string;
+  PostDate: string;
+};
+
 export type ArticleState = {
   banners: BannerType[];
-  articles: BannerType[];
+  fetchedBanner: boolean;
+  articles: ArticleType[];
 };
 
 export type RootState = {

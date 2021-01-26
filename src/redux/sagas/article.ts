@@ -28,9 +28,8 @@ function* getBannersFn(): SagaIterator {
 function* getPostsFn(): SagaIterator {
   try {
     const response = yield call(apiInstance.getPosts);
-    console.log('getPostsFn', response);
     if (response && response.data && response.status === 200) {
-      yield put({ type: GET_ARTICLES_SUCCESS, payload: response.data });
+      yield put({ type: GET_ARTICLES_SUCCESS, payload: response.data.Items });
     } else {
       yield put({ type: GET_ARTICLES_FAILURE });
     }

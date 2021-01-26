@@ -10,6 +10,7 @@ import { ArticleState } from '../types';
 
 const initialState: ArticleState = {
   banners: [],
+  fetchedBanner: false,
   articles: [],
 };
 
@@ -18,15 +19,18 @@ export default (state = initialState, action: any) => {
     case GET_BANNERS_REQUEST:
       return {
         ...state,
+        fetchedBanner: false,
       };
     case GET_BANNERS_SUCCESS:
       return {
         ...state,
         banners: action.payload,
+        fetchedBanner: true,
       };
     case GET_BANNERS_FAILURE:
       return {
         ...state,
+        fetchedBanner: true,
       };
     case GET_ARTICLES_REQUEST:
       return {
