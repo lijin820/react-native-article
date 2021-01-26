@@ -1,17 +1,16 @@
-export type UserType = {
-  id: string;
-  email: string;
-  first_name: string;
-  last_name: string;
-  avatar?: string;
+export type BannerType = {
+  Id: string;
+  ImageUrl: string;
+  Title: string;
 };
 
-export type UserState = {
-  users: UserType[];
+export type ArticleState = {
+  banners: BannerType[];
+  articles: BannerType[];
 };
 
 export type RootState = {
-  userState: UserState;
+  articleState: ArticleState;
 };
 
 export type PayloadType = {

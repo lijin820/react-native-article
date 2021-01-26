@@ -1,4 +1,8 @@
-// Users
-export const GET_ALL_USERS_REQUEST = 'users/GET_ALL_USERS_REQUEST';
-export const GET_ALL_USERS_SUCCESS = 'users/GET_ALL_USERS_SUCCESS';
-export const GET_ALL_USERS_FAILURE = 'users/GET_ALL_USERS_FAILURE';
+// Articles
+export const GET_BANNERS_REQUEST = 'article/GET_BANNERS_REQUEST';
+export const GET_BANNERS_SUCCESS = 'article/GET_BANNERS_SUCCESS';
+export const GET_BANNERS_FAILURE = 'article/GET_BANNERS_FAILURE';
+
+export const GET_ARTICLES_REQUEST = 'article/GET_ARTICLES_REQUEST';
+export const GET_ARTICLES_SUCCESS = 'article/GET_ARTICLES_SUCCESS';
+export const GET_ARTICLES_FAILURE = 'article/GET_ARTICLES_FAILURE';
