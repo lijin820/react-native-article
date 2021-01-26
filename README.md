@@ -44,7 +44,7 @@ This will start a simulator for you.
 ### iOS
 
 <div align="center">
-  <img width=170 src ="https://github.com/lijin820/react-native-article/blob/master/screens/2.jpg" />
+  <img width=170 src ="https://github.com/lijin820/react-native-article/blob/master/screens/2.png" />
 </div>
 
 ### Android
