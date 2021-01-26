@@ -1,11 +1,10 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Latest, Learning, Resources, Search, Discussions } from './';
-import { HeaderTitle } from '../components';
+import { HamburgerButton, HeaderTitle } from '../components';
 
 const Tab = createBottomTabNavigator();
 const LatestStack = createStackNavigator();
@@ -22,11 +21,7 @@ function LatestStackScreen() {
         component={Latest}
         options={{
           headerTitle: () => <HeaderTitle title="The Latest" />,
-          headerLeft: () => (
-            <TouchableOpacity onPress={() => console.log('clicked')}>
-              <Ionicons name={'menu-outline'} size={20} color={'black'} />
-            </TouchableOpacity>
-          ),
+          headerLeft: () => <HamburgerButton />,
         }}
       />
     </LatestStack.Navigator>
@@ -36,7 +31,14 @@ function LatestStackScreen() {
 function LearningStackScreen() {
   return (
     <LearningStack.Navigator>
-      <LearningStack.Screen name="Learning" component={Learning} />
+      <LearningStack.Screen
+        name="Learning"
+        component={Learning}
+        options={{
+          headerTitle: () => <HeaderTitle title="Learning" />,
+          headerLeft: () => <HamburgerButton />,
+        }}
+      />
     </LearningStack.Navigator>
   );
 }
@@ -44,7 +46,14 @@ function LearningStackScreen() {
 function ResourcesStackScreen() {
   return (
     <ResourcesStack.Navigator>
-      <ResourcesStack.Screen name="Resources" component={Resources} />
+      <ResourcesStack.Screen
+        name="Resources"
+        component={Resources}
+        options={{
+          headerTitle: () => <HeaderTitle title="Resources" />,
+          headerLeft: () => <HamburgerButton />,
+        }}
+      />
     </ResourcesStack.Navigator>
   );
 }
@@ -52,7 +61,14 @@ function ResourcesStackScreen() {
 function SearchStackScreen() {
   return (
     <SearchStack.Navigator>
-      <SearchStack.Screen name="Search" component={Search} />
+      <SearchStack.Screen
+        name="Search"
+        component={Search}
+        options={{
+          headerTitle: () => <HeaderTitle title="Search" />,
+          headerLeft: () => <HamburgerButton />,
+        }}
+      />
     </SearchStack.Navigator>
   );
 }
@@ -60,7 +76,14 @@ function SearchStackScreen() {
 function DiscussionsStackScreen() {
   return (
     <DiscussionsStack.Navigator>
-      <DiscussionsStack.Screen name="Discussions" component={Discussions} />
+      <DiscussionsStack.Screen
+        name="Discussions"
+        component={Discussions}
+        options={{
+          headerTitle: () => <HeaderTitle title="Discussions" />,
+          headerLeft: () => <HamburgerButton />,
+        }}
+      />
     </DiscussionsStack.Navigator>
   );
 }
