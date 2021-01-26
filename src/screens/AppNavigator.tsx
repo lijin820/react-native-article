@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Latest, Learning, Resources, Search, Discussions } from './';
-import { HamburgerButton, HeaderTitle } from '../components';
+import { HeaderButton, HeaderTitle } from '../components';
 
 const Tab = createBottomTabNavigator();
 const LatestStack = createStackNavigator();
@@ -21,7 +21,8 @@ function LatestStackScreen() {
         component={Latest}
         options={{
           headerTitle: () => <HeaderTitle title="The Latest" />,
-          headerLeft: () => <HamburgerButton />,
+          headerLeft: () => <HeaderButton align="left" />,
+          headerRight: () => <HeaderButton align="right" />,
         }}
       />
     </LatestStack.Navigator>
@@ -36,7 +37,7 @@ function LearningStackScreen() {
         component={Learning}
         options={{
           headerTitle: () => <HeaderTitle title="Learning" />,
-          headerLeft: () => <HamburgerButton />,
+          headerLeft: () => <HeaderButton />,
         }}
       />
     </LearningStack.Navigator>
@@ -51,7 +52,7 @@ function ResourcesStackScreen() {
         component={Resources}
         options={{
           headerTitle: () => <HeaderTitle title="Resources" />,
-          headerLeft: () => <HamburgerButton />,
+          headerLeft: () => <HeaderButton />,
         }}
       />
     </ResourcesStack.Navigator>
@@ -66,7 +67,7 @@ function SearchStackScreen() {
         component={Search}
         options={{
           headerTitle: () => <HeaderTitle title="Search" />,
-          headerLeft: () => <HamburgerButton />,
+          headerLeft: () => <HeaderButton />,
         }}
       />
     </SearchStack.Navigator>
@@ -81,7 +82,7 @@ function DiscussionsStackScreen() {
         component={Discussions}
         options={{
           headerTitle: () => <HeaderTitle title="Discussions" />,
-          headerLeft: () => <HamburgerButton />,
+          headerLeft: () => <HeaderButton />,
         }}
       />
     </DiscussionsStack.Navigator>

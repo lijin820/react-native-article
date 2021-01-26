@@ -13,6 +13,5 @@ export function HeaderTitle(props: HeaderProps) {
 const styles = StyleSheet.create({
   title: {
     fontSize: 20,
-    fontFamily: 'Raleway-Medium',
   },
 });
