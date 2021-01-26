@@ -7,6 +7,7 @@ import {
   useWindowDimensions,
   FlatList,
 } from 'react-native';
+import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
 import SegmentedControl from '@react-native-community/segmented-control';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
@@ -98,7 +99,9 @@ export function Latest() {
                   <View style={styles.textWrapper}>
                     <Text style={styles.category}>{item.SectionName}</Text>
                     <Text style={styles.subject}>{item.Subject}</Text>
-                    <Text style={styles.date}>{item.PostDate}</Text>
+                    <Text style={styles.date}>
+                      {moment(item.PostDate).format('MMMM DD, YYYY')}
+                    </Text>
                   </View>
                 </View>
               )}
@@ -126,7 +129,7 @@ const styles = StyleSheet.create({
     color: '#0E0E0E',
   },
   articleWrapper: {
-    // flex: 1,
+    marginTop: 10,
   },
   carouselWrapper: {
     width: '100%',
