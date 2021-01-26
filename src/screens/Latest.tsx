@@ -6,6 +6,7 @@ import {
   Image,
   useWindowDimensions,
   FlatList,
+  SafeAreaView,
 } from 'react-native';
 import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
@@ -53,7 +54,7 @@ export function Latest() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <SegmentedControl
         values={['Articles', 'Discussions']}
         selectedIndex={selectedIndex}
@@ -89,6 +90,7 @@ export function Latest() {
             </View>
             <FlatList
               data={articles}
+              contentContainerStyle={styles.list}
               keyExtractor={(item) => item.Id.toString()}
               renderItem={({ item, index }) => (
                 <View style={styles.listItem} key={index}>
@@ -111,7 +113,7 @@ export function Latest() {
           </View>
         ) : null}
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -139,7 +141,11 @@ const styles = StyleSheet.create({
     height: 200,
   },
   pageWrapper: {
-    height: 40,
+    height: 30,
+    marginBottom: 10,
+  },
+  list: {
+    height: 400,
   },
   pageContainer: {
     width: '100%',
@@ -176,7 +182,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   category: {
-    fontSize: 14,
+    fontSize: 15,
     color: '#B2BFCD',
   },
   subject: {
@@ -185,7 +191,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   date: {
-    fontSize: 16,
+    fontSize: 17,
     color: '#7C8790',
     marginTop: 10,
   },
